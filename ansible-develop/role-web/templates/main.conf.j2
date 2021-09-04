@@ -2,8 +2,6 @@ server {
     listen 80 default_server;
     server_name _;
 
-    server_tokens off;
-
     root /var/www/main/html;
     index index.php index.html;
 
@@ -16,7 +14,7 @@ server {
     location ~ \.php$ {
         fastcgi_pass   127.0.0.1:9000;
         fastcgi_index  index.php;
-        fastcgi_param  SCRIPT_FILENAME  /var/www/main/html$fastcgi_script_name;
+        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
         include        fastcgi_params;
     }
 }
