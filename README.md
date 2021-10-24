@@ -157,7 +157,7 @@ mysql> QUIT;
 ### データベースへの接続をテスト
 
 ```bash
-# mysql -u webmaster -p
+$ mysql -u webmaster -p
 1234
 mysql> QUIT;
 ```
